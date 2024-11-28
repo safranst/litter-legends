@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://el56d68qo6ej"]
+
+[ext_resource type="PackedScene" uid="uid://xq82itedx1rn" path="res://Character/GLB format/character-female-e.glb" id="1_145cy"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mhcnw"]
+height = 2.40728
+
+[node name="Player" type="CharacterBody3D"]
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="character-female-e2" parent="Pivot" instance=ExtResource("1_145cy")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.336672, 0, 0.363644, 0)
+shape = SubResource("CapsuleShape3D_mhcnw")
